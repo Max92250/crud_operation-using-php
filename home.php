@@ -13,32 +13,32 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
     </script>
-    <link rel="stylesheet" type="text/css" href="styles/home.css" />
-
+    <link rel="stylesheet" type="text/css" href="styles/home.css" /> 
+  
 </head>
 
 <body>
-
-
+   
+   
     <nav class="navbar navbar-light bg-light justify-content-between">
-        <div class="hong">
+        <div class="hong"> 
 
-            <h3>hello <lable></label><?php Print "$user"?> 🤪</h3>
-        </div>
-        <div class="inline">
-            <?php
+    <h3>hello <lable></label><?php Print "$user"?> 🤪</h3>
+</div>
+  <div class="inline">
+  <?php
                 echo "<td>" . "<img src=".$img.' width="80px;", height="80px;" class="inline">' . "</td>"
 
             ?>
-        </div>
-    </nav>
+  </div>
+</nav>
+  
+   
 
-
-
-
-
-
-
+   
+   
+  
+     
     <div class="lp">
         <!--Displays user's name-->
         <a href="logout.php">Click here to go logout</a><br /><br />
@@ -48,9 +48,9 @@
             <input type="submit" value="Add to list" />
         </form>
         <h2 align="center">My list</h2>
+       
 
-
-        <table class="table table-striped" border="1px" width="90%">
+        <table class="table table-striped" border="1px" width="100%">
             <thead>
                 <tr>
                     <th>Id</th>
