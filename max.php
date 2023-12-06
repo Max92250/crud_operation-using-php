@@ -24,7 +24,7 @@ session_start();
         padding: 15px;
         background: #ffd48a;
         color: white;
-        ;
+        
     }
     </style>
     <h2>Registration Page</h2>
@@ -50,6 +50,8 @@ session_start();
                     </div>
 
                     <?php unset($_SESSION['credentails']); } ?>
+                    <h3>Login</h3>
+                    <hr style="width:50%;text-align:left;margin-left:0">
                     <div class="form-group">
                         <label>User Name</label>
                         <input type="text" class="form-control" placeholder="username" name="username">

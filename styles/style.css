@@ -1,5 +1,6 @@
 body {
     font-family: "Lato", sans-serif;
+    background-color: #defcf9;
 }
 
 
@@ -13,7 +14,7 @@ body {
 
 .sidenav {
     height: 100%;
-    background-color: #000;
+    background-color: #cadefc;
     overflow-x: hidden;
     padding-top: 20px;
 }
@@ -21,6 +22,8 @@ body {
 
 .main {
     padding: 0px 10px;
+
+
 }
 
 @media screen and (max-height: 450px) {
@@ -63,7 +66,7 @@ body {
 
 
 .login-main-text{
-    margin-top: 20%;
+    margin-top: 25%;
     padding: 60px;
     color: #fff;
 }
@@ -73,6 +76,6 @@ body {
 }
 
 .btn-black{
-    background-color: #000 !important;
+    background-color: #a7bcb9;
     color: #fff;
 }
