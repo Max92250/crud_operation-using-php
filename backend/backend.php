@@ -27,7 +27,7 @@ session_start();
               $filename = $_FILES['file']['name'][$i];
 
               ## Location
-              $location = "local/".$filename;
+              $location = "../local/".$filename;
               $extension = pathinfo($location,PATHINFO_EXTENSION);
               $extension = strtolower($extension);
 
