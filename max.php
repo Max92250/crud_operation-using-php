@@ -26,6 +26,7 @@ session_start();
         color: white;
         
     }
+    
     </style>
     <h2>Registration Page</h2>
 
@@ -62,9 +63,10 @@ session_start();
                     </div>
 
                     <button type="submit" class="btn btn-black" name="submit">Login</button>
-                    <button type="submit" class="btn btn-secondary"> <a href="pop.php">register
-                        </a></button>
+                    
                 </form>
+                <button type="submit" class="btn btn-secondary"> <a href="pop.php">register
+                        </a></button>
             </div>
         </div>
     </div>

@@ -16,6 +16,50 @@
     <link rel="stylesheet" type="text/css" href="styles/home.css" /> 
   
 </head>
+<style>
+    body{
+        background:#f5f5fa;
+    }
+    .pagination {   
+     
+    width:400px;
+    padding-bottom:20px;
+
+    margin:0 auto;
+    padding-left:40px;
+    
+    
+
+}   
+.pagination a {   
+    font-weight:bold;   
+    font-size:18px;   
+    color: black;   
+    float: left;   
+    padding: 8px 16px;   
+    text-decoration: none;   
+    border:1px solid black;   
+}   
+.pagination a.active {   
+        background-color: pink;   
+}   
+.pagination a:hover:not(.active) {   
+    background-color: skyblue;   
+}   
+
+.page{
+    width:95%;
+    margin:0 auto;
+    height:300px;
+    margin-bottom:50px;
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+    border-radius:50px;
+}
+.table{
+    border-radius:50px;
+}
+
+    </style>
 
 <body>
    
@@ -49,8 +93,8 @@
         </form>
         <h2 align="center">My list</h2>
        
-
-        <table class="table table-striped" border="1px" width="100%">
+<div class="page">
+        <table class="table table-striped" border="1px">
             <thead>
                 <tr>
                     <th>Id</th>
@@ -67,8 +111,19 @@
             $conn = mysqli_connect("localhost", "root","","ping") or die(mysql_error());     //Connect to server
     
                                                                              //database
-            $query = mysqli_query($conn,"Select * from list");                      // SQL Query
-            while($row = mysqli_fetch_array($query))
+         
+            $per_page_record = 7; 
+            if (isset($_GET["page"])) {    
+                $page  = $_GET["page"];    
+           }    
+           else {    
+                 $page=1;    
+           } 
+           $start_from = ($page-1) * $per_page_record;  
+           $query = "SELECT * FROM list LIMIT $start_from, $per_page_record";       
+           $rs_result = mysqli_query ($conn, $query);         
+
+            while($row = mysqli_fetch_array($rs_result))
             {
                 Print "<tr>";
 			        Print '<td >'. $row['id'] . "</td>";
@@ -90,6 +145,43 @@
             </tbody>
 
         </table>
+
+        </div>
+        <div class="pagination">    
+      
+        <?php  
+        $query = "SELECT COUNT(*) FROM list";     
+        $rs_result = mysqli_query($conn, $query);     
+        $row = mysqli_fetch_row($rs_result);     
+        $total_records = $row[0];     
+          
+    echo "</br>";     
+        // Number of pages required.   
+        $total_pages = ceil($total_records / $per_page_record);     
+        $pagLink = "";       
+      
+        if($page>=2){   
+            echo "<a href='home.php?page=".($page-1)."'>  Prev </a>";   
+        }       
+                   
+        for ($i=1; $i<=$total_pages; $i++) {   
+          if ($i == $page) {   
+              $pagLink .= "<a class = 'active' href='home.php?page="  
+                                                .$i."'>".$i." </a>";   
+          }               
+          else  {   
+              $pagLink .= "<a href='home.php?page=".$i."'>   
+                                                ".$i." </a>";     
+          }   
+        };     
+        echo $pagLink;   
+  
+        if($page<$total_pages){   
+            echo "<a href='home.php?page=".($page+1)."'>  Next </a>";   
+        }   
+  
+      ?>    
+      </div>
         <script>
         function myFunction(id) {
             var r = confirm("Are you sure you want to delete this record?");
