@@ -19,21 +19,7 @@ body {
 
 }
 
-@media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-}
 
-@media screen and (max-width: 450px) {
-    .login-form{
-        margin-top: 10%;
-    }
-
-    .register-form{
-        margin-top: 10%;
-    }
-}
-
-@media screen and (min-width: 768px){
     .main{
         margin-left: 40%; 
     }
@@ -49,13 +35,15 @@ body {
     .login-form{
         margin-top: 50%;
         margin-left:10%;
+        
+        
     }
 
 
     .register-form{
         margin-top: 20%;
     }
-}
+
 
 
 .login-main-text{
@@ -72,3 +60,10 @@ body {
     background-color: #a7bcb9;
     color: #fff;
 }
+.alet {
+    padding: 15px;
+    background: #ffd48a;
+    color: white;
+    
+}
+

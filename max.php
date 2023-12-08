@@ -26,6 +26,11 @@ session_start();
         color: white;
         
     }
+    .lp{
+    text-align:center;
+    padding:20px;
+    color:blue;
+}
     
     </style>
     <h2>Registration Page</h2>
@@ -65,8 +70,11 @@ session_start();
                     <button type="submit" class="btn btn-black" name="submit">Login</button>
                     
                 </form>
-                <button type="submit" class="btn btn-secondary"> <a href="pop.php">register
-                        </a></button>
+               <div  class="lp">
+                <p>Or Sign Up Using </p>
+               <a  href="pop.php">SIGN UP
+                        </a>
+                    </div>
             </div>
         </div>
     </div>

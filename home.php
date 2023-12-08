@@ -110,7 +110,7 @@
                     <?php
             $conn = mysqli_connect("localhost", "root","","ping") or die(mysql_error());     //Connect to server
     
-                                                                             //database
+                                                                             
          
             $per_page_record = 7; 
             if (isset($_GET["page"])) {    

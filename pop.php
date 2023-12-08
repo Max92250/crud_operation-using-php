@@ -8,7 +8,7 @@
     <title>Register</title>
 
     <link rel="stylesheet" type="text/css" href="styles/styless.css" />
-
+    <title>signup</title>
 </head>
 
 <body>
